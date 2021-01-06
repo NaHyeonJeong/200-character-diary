@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 일기 작성 화면 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE3D0"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/chooseDateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="tabDatePicker"
+            android:text="@string/choose_d_btn"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/selectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/choose_date"
+            android:textSize="20sp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/askMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ask_mood"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/badMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ratingBar"
+                android:layout_alignBottom="@+id/ratingBar"
+                android:text="@string/bad_mood" />
+            <!-- 별점 만점은 5점, 증가는 1점 씩 -->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/askMood"
+                android:numStars="5"
+                android:stepSize="1" />
+            <TextView
+                android:id="@+id/goodMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ratingBar"
+                android:layout_alignBottom="@+id/ratingBar"
+                android:text="@string/good_mood"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="8">
+        <TextView
+            android:id="@+id/cntText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/cnt_characters"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/writeDiary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="200"
+            android:hint="@string/write_diary_hint"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.5">
+        <!-- 갤러리에서 가져온 이미지를 보임 -->
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/saveDiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_diary"
+            android:textSize="18sp"
+            android:background="@drawable/diary_btn_style"/>
+        <Button
+            android:layout_marginTop="5dp"
+            android:id="@+id/toMainBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_main"
+            android:textSize="18sp"
+            android:background="@drawable/diary_btn_style"/>
+
+    </LinearLayout>
+</LinearLayout>

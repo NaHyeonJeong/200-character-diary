@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hj.fterm">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_diary"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_diary_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity" android:configChanges="uiMode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".WriteDiaryActivity" android:parentActivityName=".MainActivity" android:label="@string/write_activity"/>
+        <activity android:name=".PastDiaryActivity" android:parentActivityName=".PastDiaryListActivity" android:label="@string/pastDiary_activity"/>
+        <activity android:name=".PastDiaryListActivity" android:parentActivityName=".MainActivity" android:label="@string/pastDiaryList_activity"/>
+
+    </application>
+
+
+
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/infoApp"
+        android:title="@string/introduce_app"/>
+    <item
+        android:id="@+id/devPerson"
+        android:title="@string/dev_person"/>
+    <item
+        android:id="@+id/music"
+        android:title="@string/choose_music">
+        <menu>
+            <item
+                android:id="@+id/favoriteMusic"
+                android:title="@string/favorite_music"/>
+            <item
+                android:id="@+id/lightMusic"
+                android:title="@string/light_music"/>
+            <item
+                android:id="@+id/christmasMusic"
+                android:title="@string/christmas_music"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/stopMusic"
+        android:title="@string/stop_music"/>
+</menu>

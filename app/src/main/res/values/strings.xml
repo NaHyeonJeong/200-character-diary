@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">일기장</string>
+    <string name="write_activity">일기 쓰기 페이지</string>
+    <string name="pastDiaryList_activity">지난 일기 리스트 보기</string>
+    <string name="pastDiary_activity">지난 일기 보기</string>
+    <!-- 메인 화면에 사용되는 문자열 -->
+    <string name="write_btn">일기 쓰러 가기</string>
+    <string name="past_btn">지난 일기 구경하러 가기</string>
+    <!-- 옵션 메뉴에 사용되는 문자열 -->
+    <string name="introduce_app">앱 소개</string>
+    <string name="introduce_app_str">
+        이 앱은 총 200자만 쓸 수 있는 간단한 일기장 입니다.\n평소 일기를 쓰고는 싶은데 큰 화면을 채우는게 어려워서 만들게 되었습니다.\n많은 사람들이 부담 없이 일기를 쓰는 그날까지!
+    </string>
+    <string name="myName">이름 : 나현정</string>
+    <string name="studentID">학번 : 201858042</string>
+    <string name="classDivision">안드로이드 프로그래밍 분반은?</string>
+    <string name="classA">A반 (13:00~14:15)</string>
+    <string name="classB">B반 (14:30~15:45)</string>
+    <string name="smartphone">사용하는 스마트폰은?</string>
+    <string name="android">안드로이드 폰</string>
+    <string name="iphone">아이폰</string>
+    <string name="notify_save">
+        일기 저장 완료\n저장한 일기를 보고싶다면\n 지난 일기 보기 페이지로 가보세요.
+    </string>
+    <string name="dev_person">개발자</string>
+    <string name="choose_music">음악 재생</string>
+    <string name="favorite_music">앱 만든 사람이 좋아함</string>
+    <string name="christmas_music">크리스마스 곡</string>
+    <string name="light_music">밝은 곡</string>
+    <string name="stop_music">음악 중지</string>
+    <!-- 일기 작성 화면에 사용되는 문자열 -->
+    <string name="cnt_characters">0자 / 200자</string>
+    <string name="write_diary_hint">자유롭게 200자 이내에서 일기를 작성해보세요</string>
+    <string name="choose_d_btn">날짜 선택</string>
+    <string name="choose_date">일기를 작성할 날짜</string>
+    <string name="ask_mood">오늘의 기분은?</string>
+    <string name="good_mood">좋아</string>
+    <string name="bad_mood">별로</string>
+    <string name="back_to_main">메인 화면</string>
+    <string name="picture">사진 첨부</string>
+    <string name="music">음악 첨부</string>
+    <string name="attachments">첨부파일 : </string>
+    <string name="save_diary">일기 저장</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="past_mood">이 날의 기분은?</string>
+    <string name="last_diary_date">0000년 00월 00일 일기</string>
+    <string name="back_to_pastdiarylist">이전 화면</string>
+    <!-- Ted Permission -->
+    <string name="permission_1">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+    <string name="permission_2">사진 및 파일을 저장하기 위하여 접근 권한이 필요합니다.</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 지난 일기를 보여주는 dialog -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFE3D0">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/pastDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:text="@string/last_diary_date"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/askMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/past_mood"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/badMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/pastRatingBar"
+            android:layout_alignBottom="@+id/pastRatingBar"
+            android:text="@string/bad_mood" />
+        <!-- 별점 만점은 5점, 증가는 1점 씩 -->
+        <RatingBar
+            android:id="@+id/pastRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/askMood"
+            android:numStars="5"
+            android:stepSize="1"
+            android:rating="0"
+            android:isIndicator="true"/>
+        <TextView
+            android:id="@+id/goodMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pastRatingBar"
+            android:layout_alignBottom="@+id/pastRatingBar"
+            android:text="@string/good_mood"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="4">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이 날에 무슨일이?"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/pastStory"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="일기 내용 보여짐"
+            android:textSize="18sp"
+            android:background="#FFC4FB"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/back_to_list_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_pastdiarylist"
+            android:textSize="18sp"
+            android:background="@drawable/diary_btn_style"/>
+        <Button
+            android:layout_marginTop="5dp"
+            android:id="@+id/back_to_main_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_main"
+            android:textSize="18sp"
+            android:background="@drawable/diary_btn_style"/>
+    </LinearLayout>
+
+</LinearLayout>
