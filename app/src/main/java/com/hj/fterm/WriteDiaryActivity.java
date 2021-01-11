@@ -80,10 +80,14 @@ public class WriteDiaryActivity extends AppCompatActivity {
                 System.out.println("moodInfo : " + moodInfo);
                 String storyInfo = editText.getText().toString(); // 일기 내용을 가져옴
                 System.out.println("storyInfo : " + storyInfo);
-
-                // DB 에 정보 저장 - 단 이미 있는 날짜의 경우에는 구경을 유도하도록...
-                saveData(dateInfo, moodInfo, storyInfo);
-                finish();
+                // 날짜를 입력한 경우에만 데이터를 저장하도록 하고 싶더...
+                if(dateMessage == null)
+                    Toast.makeText(getApplicationContext(), "날짜를 입력해주세요", Toast.LENGTH_SHORT).show();
+                else{
+                    // DB 에 정보 저장 - 단 이미 있는 날짜의 경우에는 구경을 유도하도록...
+                    saveData(dateInfo, moodInfo, storyInfo);
+                    finish();
+                }
                 overridePendingTransition(0, 0); // 화면 전환 애니메이션 없애기 위함
             }
         });
@@ -95,7 +99,7 @@ public class WriteDiaryActivity extends AppCompatActivity {
         UseDatabase database = UseDatabase.getInstance(this);
         database.open();
 
-        if(database.execSQL(sql) == true){
+        if(database.execSQL(sql) == true){ // data 저장 성공 시
             View toastView = (View) View.inflate(WriteDiaryActivity.this, R.layout.save_toast, null);
             Toast toast = new Toast(WriteDiaryActivity.this);
             toast.setView(toastView);
