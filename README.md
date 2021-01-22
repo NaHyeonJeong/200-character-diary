@@ -1,7 +1,5 @@
 # Introduce "200 character diary"
 
-## 3학년2학기 안드로이드프로그래밍 기말과제
-
 ## 구현된 기능
 ### 일기 입력 wirte_diary.xml
 1. 날짜를 선택해 특정 날짜에 일기를 작성
